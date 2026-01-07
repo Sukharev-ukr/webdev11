@@ -12,6 +12,12 @@ services:
         build:
             context: .
             dockerfile: PHP.Dockerfile
+        environment:
+            DB_HOST: mysql
+            DB_PORT: 3306
+            DB_NAME: squadsport
+            DB_USER: root
+            DB_PASSWORD: secret123
         volumes:
             - ./app:/app
     mysql:
@@ -24,7 +30,7 @@ services:
         volumes:
             - mysqldata:/var/lib/mysql
         ports:
-            - 3306:3306
+            - 3307:3306
     phpmyadmin:
         image: phpmyadmin:latest
         ports:

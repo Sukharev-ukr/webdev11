@@ -1,0 +1,433 @@
+:root {
+    --brand-dark: #0f172a;
+    --brand-accent: #facc15;
+    --brand-gradient: linear-gradient(120deg, #2563eb, #7c3aed);
+    --muted: #94a3b8;
+    --surface: #ffffff;
+    --surface-muted: #f8fafc;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 35%, #f3f4f6 35%, #f8fafc 100%);
+    color: #0f172a;
+    overflow-x: hidden;
+}
+
+header {
+    flex-shrink: 0;
+}
+
+main.container {
+    flex: 1;
+    width: 100%;
+    padding-bottom: 2rem;
+    overflow-y: auto;
+}
+
+footer {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* Make navbar buttons visible */
+.navbar .navbar-nav .btn {
+    color: #fff !important;
+    background: #0f172a !important;
+    border-color: #0f172a !important;
+    white-space: nowrap;
+}
+
+.navbar .navbar-nav .btn:hover,
+.navbar .navbar-nav .btn:focus {
+    color: #fff !important;
+    background: #1e293b !important;
+    border-color: #1e293b !important;
+}
+
+/* Make navbar links visible - white text on dark navbar (for dropdowns) */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+/* Make Admin dropdown more visible */
+.nav-link.dropdown-toggle.text-warning {
+    color: #facc15 !important;
+    font-weight: 600 !important;
+}
+
+.nav-link.dropdown-toggle.text-warning:hover {
+    color: #eab308 !important;
+}
+
+footer.bg-dark {
+    background-color: #0f172a !important;
+}
+
+.bg-gradient {
+    background: var(--brand-gradient);
+}
+
+.tracking-wide {
+    letter-spacing: 0.08em;
+}
+
+.hero-card {
+    background: var(--brand-gradient);
+    border-radius: 24px;
+    color: white;
+    padding: 3rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.35), transparent 45%);
+    pointer-events: none;
+}
+
+.hero-card h1 {
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+    font-weight: 700;
+}
+
+.hero-cta .btn {
+    min-width: 160px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 20px;
+    box-shadow: 0 25px 65px rgba(15, 23, 42, 0.12);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.section-heading {
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.match-card {
+    border-radius: 18px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    padding: 1.5rem;
+    background: var(--surface);
+    box-shadow: 0 20px 35px rgba(15, 23, 42, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15);
+}
+
+.match-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+.match-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.filters-pills .form-select,
+.filters-pills .form-control {
+    border-radius: 999px;
+    padding: 0.55rem 1.25rem;
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.sport-row {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    margin-bottom: 1rem;
+}
+
+.sport-row .btn-text {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+.btn-text {
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-size: 0.95rem;
+    text-decoration: underline;
+}
+
+.form-floating > label {
+    color: var(--muted);
+}
+
+.profile-panel {
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 18px;
+}
+
+.stats-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.stat-card {
+    background: var(--brand-dark);
+    color: white;
+    border-radius: 18px;
+    padding: 1.3rem;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.stat-card span {
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.stat-card strong {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.table-modern {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.table-modern thead {
+    background: var(--surface-muted);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+}
+
+.table-modern th,
+.table-modern td {
+    padding: 1rem 1.25rem;
+    vertical-align: middle;
+}
+
+.badge-soft {
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.85rem;
+}
+
+.badge-soft.upcoming {
+    background: rgba(99, 102, 241, 0.15);
+    color: #4c1d95;
+}
+
+.badge-soft.ongoing {
+    background: rgba(16, 185, 129, 0.18);
+    color: #065f46;
+}
+
+.badge-soft.finished {
+    background: rgba(248, 113, 113, 0.2);
+    color: #7f1d1d;
+}
+
+.badge-soft.open {
+    background: rgba(59, 130, 246, 0.18);
+    color: #1d4ed8;
+}
+
+.badge-soft.full {
+    background: rgba(248, 250, 252, 0.9);
+    color: #0f172a;
+}
+
+.badge-soft.cancelled {
+    background: rgba(148, 163, 184, 0.25);
+    color: #475569;
+}
+
+.badge-soft.win {
+    background: rgba(16, 185, 129, 0.2);
+    color: #065f46;
+}
+
+.badge-soft.loss {
+    background: rgba(248, 113, 113, 0.2);
+    color: #7f1d1d;
+}
+
+.badge-soft.none {
+    background: rgba(203, 213, 225, 0.4);
+    color: #475569;
+}
+
+.tournament-card {
+    border-radius: 20px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    padding: 1.75rem;
+    background: var(--surface);
+    box-shadow: 0 25px 45px rgba(15, 23, 42, 0.08);
+}
+
+.admin-pill {
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.05);
+    padding: 0.35rem 0.85rem;
+    font-size: 0.85rem;
+}
+
+.form-section-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--brand-dark);
+}
+
+.auth-card {
+    max-width: 520px;
+    margin-inline: auto;
+    border-radius: 24px;
+    padding: 2.5rem;
+    background: var(--surface);
+    box-shadow: 0 35px 55px rgba(15, 23, 42, 0.12);
+}
+
+.auth-card h1 {
+    font-weight: 700;
+}
+
+.alert {
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+}
+
+.inline-form {
+    display: inline-block;
+}
+
+.admin-chip {
+    font-size: 0.85rem;
+    background: rgba(99, 102, 241, 0.15);
+    color: #3730a3;
+    border-radius: 999px;
+    padding: 0.2rem 0.75rem;
+}
+
+.bg-surface {
+    background: var(--surface-muted);
+    border-radius: 18px;
+    padding: 1.5rem;
+}
+
+.btn-glow {
+    box-shadow: 0 15px 30px rgba(250, 204, 21, 0.45);
+}
+
+/* Make all buttons black or yellow for white website */
+.btn-outline-light,
+.btn-dark,
+.btn-dark.btn-sm {
+    color: #fff !important;
+    background: #0f172a !important;
+    border-color: #0f172a !important;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus,
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark.btn-sm:hover,
+.btn-dark.btn-sm:focus {
+    color: #fff !important;
+    background: #1e293b !important;
+    border-color: #1e293b !important;
+}
+
+/* Keep yellow buttons as accent */
+.btn-warning {
+    background: #facc15 !important;
+    border-color: #facc15 !important;
+    color: #0f172a !important;
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+    background: #eab308 !important;
+    border-color: #eab308 !important;
+    color: #0f172a !important;
+}
+
+/* Ensure login/logout and profile buttons are black with white text */
+header .btn-outline-light,
+header .btn-dark,
+.btn-outline-light.btn-sm,
+.btn-dark.btn-sm {
+    color: #fff !important;
+    background: #0f172a !important;
+    border-color: #0f172a !important;
+}
+
+header .btn-outline-light:hover,
+header .btn-outline-light:focus,
+header .btn-dark:hover,
+header .btn-dark:focus,
+.btn-outline-light.btn-sm:hover,
+.btn-outline-light.btn-sm:focus,
+.btn-dark.btn-sm:hover,
+.btn-dark.btn-sm:focus {
+    color: #fff !important;
+    background: #1e293b !important;
+    border-color: #1e293b !important;
+}
+
+@media (max-width: 767px) {
+    .hero-card {
+        padding: 2rem;
+    }
+
+    .match-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
