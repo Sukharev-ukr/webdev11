@@ -1,0 +1,116 @@
+Subject: Web Development 1 - Project Proposal: SquadSport Platform
+
+Dear M. de Haan / Dan Breczinski,
+
+I am writing to submit my project proposal for the Web Development 1 course (Term 2.2). I apologize for the delayed submission - this should have been submitted earlier in the project timeline.
+
+PROJECT TITLE: SquadSport - Sports Match Management Platform
+
+USE CASE:
+SquadSport is a web application that helps sports enthusiasts in Amsterdam discover and join pick-up games, track their performance, and participate in organized tournaments. The platform addresses the real problem of fragmented sports organization across social media and messaging apps by providing a centralized, easy-to-use solution.
+
+TARGET USERS:
+- Primary: Sports players looking for games and tracking their history
+- Secondary: Organizers/admins managing matches, tournaments, and events
+
+MAIN FEATURES:
+
+User Features:
+• User registration and authentication with secure login
+• Browse and filter matches by sport, location, and date (with AJAX)
+• Join/leave matches with real-time updates
+• Track match history with win/loss records
+• Manage profile with sports skill levels (1-5 rating per sport)
+
+Admin Features:
+• Dashboard with statistics (users, matches, tournaments)
+• Full CRUD operations for matches, sports, locations, tournaments, events
+• Participant management and result approval
+• Real-time updates using AJAX
+
+API Features:
+• Public JSON endpoints for today's matches and upcoming tournaments
+• Authenticated endpoints for match participation
+• Ready for potential mobile app integration
+
+TECHNICAL IMPLEMENTATION:
+
+Technologies:
+• Backend: PHP 8+ with PDO, MariaDB database
+• Frontend: HTML5, CSS3, Bootstrap 5.3.3, Vanilla JavaScript
+• Infrastructure: Docker (NGINX, PHP-FPM, MariaDB)
+• Architecture: Custom MVC pattern with routing system
+
+Security Features:
+• CSRF protection on all forms and AJAX requests
+• SQL injection prevention (PDO prepared statements)
+• XSS prevention (output sanitization with htmlspecialchars)
+• Password hashing with bcrypt
+• Input validation (email, required fields, type checking)
+• Route protection with authentication and authorization
+
+Database:
+• 9 tables: users, matches, match_participants, sports, locations, tournaments, tournament_rounds, user_sports, events
+• Proper relationships with foreign keys
+• Optimized queries with JOINs
+
+COURSE REQUIREMENTS COVERAGE:
+
+✅ Authentic Use Case: Real-world sports community platform
+✅ CSS: Bootstrap 5 + custom responsive design with transitions
+✅ Sessions: User authentication and flash messaging
+✅ Security: CSRF, XSS, SQL injection prevention, password hashing
+✅ MVC: 9 controllers, 10 models, organized views, custom routing
+✅ API: Public JSON endpoints + authenticated endpoints
+✅ JavaScript: AJAX for filtering and real-time match join/leave
+✅ Legal/Accessibility: WCAG 2.1 Level AA compliance + GDPR documentation
+
+UNIQUE FEATURES:
+
+• Real-time match filtering without page refresh
+• Automatic match capacity management (open → full status)
+• Skill-based user profiles (foundation for future matching)
+• Admin result approval system with AJAX
+• Legacy password migration (MySQL PASSWORD() → bcrypt)
+• Comprehensive API documentation
+
+DELIVERABLES:
+
+• GitHub Repository: https://github.com/Sukharev-ukr/webdev11
+• Comprehensive README with full documentation (17KB)
+• All security features documented with code references
+• WCAG compliance documented with implementation details
+• GDPR compliance statement with data protection measures
+• Complete API documentation with request/response examples
+• Dockerized environment for easy setup
+
+LEARNING OBJECTIVES ACHIEVED:
+
+Through this project, I have:
+• Implemented proper MVC architecture with separation of concerns
+• Mastered secure database integration with PDO
+• Applied security best practices (CSRF, XSS, SQL injection prevention)
+• Created RESTful JSON APIs
+• Built interactive UIs with AJAX
+• Understood WCAG accessibility and GDPR requirements
+
+PROJECT STATUS:
+The project is fully implemented and documented. All features are functional, security measures are in place, and the application is ready for evaluation.
+
+DOCUMENTATION:
+A detailed project proposal document (PROJECT_PROPOSAL.md) is included in the repository with:
+• Complete feature breakdown
+• Technical architecture details
+• Timeline and development phases
+• Success criteria and deliverables
+
+I am confident this project meets all course requirements and demonstrates proficiency in web development fundamentals. I look forward to your feedback and am available to discuss or demonstrate any aspect of the implementation.
+
+Please let me know if you need any additional information or clarification.
+
+Best regards,
+[Your Name]
+[Your Student Number]
+[Your Email]
+
+Repository: https://github.com/Sukharev-ukr/webdev11
