@@ -18,7 +18,7 @@ html {
 
 body {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -33,15 +33,15 @@ header {
 }
 
 main.container {
-    flex: 1;
+    flex: 1 0 auto;
     width: 100%;
     padding-bottom: 2rem;
-    overflow-y: auto;
 }
 
 footer {
     flex-shrink: 0;
     width: 100%;
+    margin-top: auto;
 }
 
 /* Make navbar buttons visible */
